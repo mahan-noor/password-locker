@@ -17,7 +17,7 @@ class user:
         mehod that save users object into the userlist
 
         """
-        User.user_list
+        User.user_list.append(self)
 
 
 
