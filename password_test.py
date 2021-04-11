@@ -30,6 +30,61 @@ class TestClass(unittest.TestClass):
         self.new_user.save_user() #saving new user
         self.assertEqual(len(User.user_list),1)
 
+
+class TestCredentials(unittest.TestCase):
+    """
+    A test class that define test case for credentials class
+    """
+    def setUp(self):
+        """
+        setup up test to run before each test
+        """
+        self.new.credential = Credentials('Instagram','Ismahan_noor', 'yhi6ug0')
+    
+    def test_init(self):
+        """
+        Test case to see if the object is initialized properly
+        """
+        self.assertEqual(self.new_credential.account,'Instagram')
+        self.assertEqual(self.new_credential.username,'Ismahan_noor')
+        self.assertEqual(self.new_credential.password,'yhi6ug0')
+
+    def save_credential_test(self):
+        """
+        Test case to test if credential object is saved in credential list
+        """
+        self.new_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list),1)
+
+    def tearDown(self):
+        """
+        Test case that does clean up after each test has run
+        """
+        Credentials.credentials_list = []
+
+    def test_save_many_accounts(self):
+        """
+        Test case to check if  we have multiple credential objects in our credential list
+        """
+        self.new_credential.save_details()
+        test_credential = Credentials("Twitter","mahan-noor","Cfhu56g")
+        test_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list)2)
+
+    def test_delete(self):
+        """
+        Test to check if we can delete account credential
+
+        """
+        self.new_credential.save_details()
+        test_credential = Credentials("Twitter","mahan-noor","Cfhu56g")
+        test_credential.save_details()
+
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list)1)
+ 
+
+
 if __name__ == '__main__':
     unittest.main()
 
