@@ -1,6 +1,7 @@
+import random
 import string
 import pyperclip
-class user:
+class User:
     """
     Create class thats generates new instance of a user
     """ 
