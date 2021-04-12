@@ -19,7 +19,24 @@ The application requires one to have installed:
   * open your code editor
 
   ## BDD
-    # Behaviour      input                     output
-   |open terminal | run command./run.py | enter the folowing to proceed *CA-create account 
-                                        |  
-                                        |
+  * open terminal,run command ./run.py -output = enter the following to proceed CA-create account.LI-login if have an account
+  * if chose LI you will enter your user name and password
+  * if chose  CA you will be able to create new account
+  * To move forward you will use short_codes
+      * cc-create credential
+      * dc-display credential
+      * fc-find credential
+      * gp-generate password
+      * d-delete
+      * ex-exit application
+
+  ## Contact
+  Gmail: ismahanabey@gmail.com
+
+  ## Lincece
+   * MIT LICENCE
+
+  ## Copyright
+    * Copyright (c) 2021 Ismahan Abey
+                                          
+                                        
