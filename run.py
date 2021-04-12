@@ -22,8 +22,9 @@ def display_user():
 
 def login_user(username,password):
     """
-    function that checks and login the user
+    function that checks if the user exist and login the user
     """
+
     check_user = Credentials.verify_user(username,password)
     return check_user
 
@@ -68,7 +69,7 @@ def generate_password():
     """
     generate a random password for the user
     """
-    auto_password= Credentials.generate_password()
+    auto_password= Credentials.generate_Password()
     return auto_password
 
 def copy_password(account):
@@ -79,40 +80,40 @@ def copy_password(account):
     return Credentials.copy_password(account)   
 
 def main():
-    print("Hello welcome to you account pass lock...\n Please enter one of the following to proceed.\n CA --- Create New Account  \n LI --- Have An Account  \n")
-    short_code =input("").lower().strip()
-    if short_code == "ca":
-        print("Sign Up")
-        print('*' * 45)
-        username =input("user_name")
-        while True:
-            print("TP- type your own password:\n GP-generate a random password")
-            password_Choice = input().lower().strip()
-            if password_Choice == 'tp':
-                password = input("Enter your password")
-                break
-            elif password_Choice == 'gp':
-                password = generate_password()
-                break
-            else:
-                print("Invalid password please try again")
-        save_user(create_new_user(username,password))
-        print("*" *83)
-        print(f"Hey {username}, Your account has been created succesfully. Your password is {password}")
-        print("*"*83)
-    elif short_code == "li":
-        print("*"*50)
-        print("Enter your username and password to login")
-        print("*"*50)
-        username = input("username: ")
-        password = input("password: ")
-        login = login_user(username,password)
-        if login_user == login:
-            print(f"Hello{username}.Welcome to password-locker manager")
-            print('\n')
+        print("Hello welcome to you account pass lock...\n Please enter one of the following to proceed.\n CA --- Create New Account  \n LI --- Have An Account  \n")
+        short_code =input("").lower().strip()
+        if short_code == "ca":
+            print("Sign Up")
+            print('*' * 45)
+            username =input("user_name")
+            while True:
+                print("TP- type your own password:\n GP-generate a random password")
+                password_Choice = input().lower().strip()
+                if password_Choice == 'tp':
+                    password = input("Enter your password")
+                    break
+                elif password_Choice == 'gp':
+                    password = generate_password()
+                    break
+                else:
+                        print("Invalid password please try again")
+            save_user(create_new_user(username,password))
+            print("*" *83)
+            print(f"Hey {username}, Your account has been created succesfully. Your password is {password}")
+            print("*"*83)
+        elif short_code == "li":
+            print("*"*50)
+            print("Enter your username and password to login")
+            print("*"*50)
+            username = input("username: ")
+            password = input("password: ")
+            login = login_user(username,password)
+            if login_user == login:
+                print(f"Hello{username}.Welcome to password-locker manager")
+                print('\n')
         while True:
             print("Use these short codes:\n CC -Create new credential \n DC-Display Credentials \n FC- Find Credential \n GP-Generate random password \n D-Delete credential \n Ex-exit the application \n ")
-            short_code = input().lower.strip()
+            short_code = input().lower().strip()
             if short_code == 'cc':
                 print('Create New Credential')
                 print("*"*20)
@@ -127,7 +128,7 @@ def main():
                         password = input("Enter owns password\n")
                         break
                     elif password_Choice =='gp':
-                        password = generate_password()
+                        password = generate_Password()
                         break
                     else:
                         print("invalid password try again")
@@ -160,7 +161,7 @@ def main():
             elif short_code == 'd':
                 print("Enter the account name of credential you want to delete")
                 search_name = input().lower()
-                if find_credentia(search_name):
+                if find_credential(search_name):
                     search_credential = find_credential(search_name)
                     print("_"*50)
                     search_credential.delete_credentials()
@@ -181,6 +182,7 @@ def main():
             print("Please enter a valid input")
 
 if __name__ == '__main__':
+
     main()
    
 

@@ -47,7 +47,7 @@ class Credentials():
         """
 
         a_user = ""
-        for user in user.user_list:
+        for user in User.user_list:
             if(user.username == username and user.password== password):
                     a_user == user.username
 
