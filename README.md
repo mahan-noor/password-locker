@@ -14,5 +14,12 @@ The application requires one to have installed:
  * pyperclip
 
  ## Cloning
- 
+  * you can clone using this link https://github.com/mahan-noor/password-locker.git
+  * cd password-locker
+  * open your code editor
 
+  ## BDD
+    # Behaviour      input                     output
+   |open terminal | run command./run.py | enter the folowing to proceed *CA-create account 
+                                        |  
+                                        |
