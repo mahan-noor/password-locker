@@ -62,7 +62,23 @@ def check_credentials(account):
     """
     Function that checks if the credential exist
     """
-    
+    return Credentials.if_credential_exist(account)
+
+def generate_password():
+    """
+    generate a random password for the user
+    """
+    auto_password= Credentials.generate_password()
+    return auto_password
+
+def copy_password(account):
+    """
+    a function that copies password using pyperclip
+    we import pyperclip then declare a fuction that copies
+    """
+    return Credentials.copy_password(account)
+
+
 
 
 
