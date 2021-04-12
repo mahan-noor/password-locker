@@ -33,7 +33,7 @@ The application requires one to have installed:
   ## Contact
   Gmail: ismahanabey@gmail.com
 
-  ## Lincece
+  ## Licence
    * MIT LICENCE
 
   ## Copyright
