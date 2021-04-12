@@ -5,13 +5,21 @@
 * Ismahan abey
 
 ## Description
-This project is a python application that manages login signup of credential of a user  for various accounts it needs username and password for each account.it can also store ans generate new password for each accounts.
+This app is a python application that allows login and signup of credentials for a user for various accounts it needs username and password for each account.it can also store and generate new password for each accounts and also allows user to save or delete existing credentials.
 
 ## Installation
 The application requires one to have installed:
  * python3.8
  * pip
  * pyperclip
+
+ ## Known bug
+ * There isn't any bug so far
+
+ ## Technologies used
+
+ * python3.8
+
 
  ## Cloning
   * you can clone using this link https://github.com/mahan-noor/password-locker.git
