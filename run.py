@@ -69,7 +69,7 @@ def generate_password():
     """
     generate a random password for the user
     """
-    auto_password= Credentials.generate_Password()
+    auto_password= Credentials.generatePassword()
     return auto_password
 
 def copy_password(account):
@@ -93,7 +93,7 @@ def main():
                     password = input("Enter your password")
                     break
                 elif password_Choice == 'gp':
-                    password = generate_password()
+                    password = generate_Password()
                     break
                 else:
                         print("Invalid password please try again")
@@ -132,7 +132,7 @@ def main():
                         break
                     else:
                         print("invalid password try again")
-                save_credentials(create_new_credential(account,userName,password))
+                save_credential(create_new_credential(account,userName,password))
                 print('\n')
             elif short_code == "dc":
                 if display_accounts_details():
