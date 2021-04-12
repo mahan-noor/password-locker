@@ -76,7 +76,41 @@ def copy_password(account):
     a function that copies password using pyperclip
     we import pyperclip then declare a fuction that copies
     """
-    return Credentials.copy_password(account)
+    return Credentials.copy_password(account)   
+
+def password():
+    print("Hello welcome to you account pass lock...\n Please enter one of the following to proceed.\n CA --- Create New Account  \n LI --- Have An Account  \n")
+    short_code =input("").lower().strip()
+    if short_code == "ca":
+        print("Sign Up")
+        print('*' * 45)
+        username =input("user_name")
+        while True:
+            print("TP- type your own password:\n GP-generate a random password")
+            password_Choice = input().lower().strip()
+            if password_Choice == 'tp':
+                password = input("Enter your password")
+                break
+            elif password_Choice == 'gp':
+                password = generate_password()
+                break
+            else:
+                print("Invalid password please try again")
+        save_user(create_new_user(username,password))
+        print("*" *83)
+        print(f"Hey {username}, Your account has been created succesfully. Your password is {password}")
+        print("*"*83)
+    elif short_code == "li":
+        print("*"*50)
+        print("Enter your username and password to login")
+        print("*"*50)
+        username = input("username: ")
+        password = input("password: ")
+        if login_user = login:
+            print(f"Hello{username}.Welcome to password-locker manager")
+            print('\n')
+        
+
 
 
 
